@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup_Form</title>
+</head>
+<body>
+    <h2>Enter Signup Details</h2>
+    <form method="post">
+        {% csrf_token %}
+        <link rel="stylesheet" href="{% static 'signup_form.css' %}">
+        {{ form.as_p }}  <!-- Django will render form fields here -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
